@@ -2,13 +2,9 @@
 //Programmer: Geoffrey Grossthal
 //Program: App.js component for react app
 
-//Importing necessary modules from React and other files
 import React, { useState, useEffect } from 'react';
-//Import logo file
 import logo from './logo.svg';
-//Import CSS styles for App component
 import './App.css';
-//Import weather component
 import WeatherComponent from './WeatherComponent';
 
 function App() {
@@ -31,11 +27,11 @@ function App() {
   // Function to update background image based on city index
   useEffect(() => {
     const images = [
+      '/london-background.jpg',
       '/new-york-background.jpg',
       '/tokyo-background.jpg',
       '/paris-background.jpg',
-      '/scottsdale-background.jpg',
-      '/london-background.jpg',
+      '/scottsdale-background.jpg'
     ]; // Example image URLs for each city
     setBackgroundImage(images[currentCityIndex]);
   }, [currentCityIndex]);
@@ -45,17 +41,19 @@ function App() {
       <header className="App-header" style={{ backgroundImage: `url(${backgroundImage})` }}>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload. My name is Geoffrey.
+          My name is Geoffrey.
+          This is my react app showing the weather of various locations with pictures.
+          The link below provides access to the weather API.
         </p>
-        <WeatherComponent apiKey={apiKey} location={cities[currentCityIndex]} />
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://www.weatherapi.com/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Visit Weather API Site
         </a>
+        <WeatherComponent apiKey={apiKey} location={cities[currentCityIndex]} />
       </header>
     </div>
   );
