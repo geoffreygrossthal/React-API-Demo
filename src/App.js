@@ -39,7 +39,6 @@ function App() {
   return (
     <div className="App">
       <header className="App-header" style={{ backgroundImage: `url(${backgroundImage})` }}>
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           My name is Geoffrey.
           This is my react app showing the weather of various locations with pictures.
