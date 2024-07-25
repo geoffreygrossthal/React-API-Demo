@@ -13,7 +13,7 @@ import WeatherComponent from './WeatherComponent';
 
 function App() {
   const apiKey = '3a6e356b738a4199b99151954241107';
-  const cities = ['London', 'New York', 'Tokyo', 'Paris'];
+  const cities = ['London', 'New York', 'Tokyo', 'Paris', 'Scottsdale'];
 
   const [currentCityIndex, setCurrentCityIndex] = useState(0);
   const [backgroundImage, setBackgroundImage] = useState('/london-background.jpg'); // Initial background image URL
@@ -34,6 +34,7 @@ function App() {
       '/new-york-background.jpg',
       '/tokyo-background.jpg',
       '/paris-background.jpg',
+      '/scottsdale-background.jpg',
       '/london-background.jpg',
     ]; // Example image URLs for each city
     setBackgroundImage(images[currentCityIndex]);
