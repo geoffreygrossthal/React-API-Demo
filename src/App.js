@@ -8,7 +8,7 @@ import './App.css';
 import WeatherComponent from './WeatherComponent';
 
 function App() {
-  const apiKey = '3a6e356b738a4199b99151954241107';
+  const apiKey = '';
   const cities = ['London', 'New York', 'Tokyo', 'Paris', 'Scottsdale'];
 
   const [currentCityIndex, setCurrentCityIndex] = useState(0);
